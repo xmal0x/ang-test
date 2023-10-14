@@ -1,0 +1,20 @@
+<table class="table">
+
+  <thead>
+
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Active</th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.active}}</td>
+  </tr>
+  </tbody>
+</table>

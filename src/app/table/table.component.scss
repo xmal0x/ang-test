@@ -1,0 +1,20 @@
+@import "../vars";
+
+td, th {
+  border: 1px solid $border-dark;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba($base-color, 0.1);
+}
+
+caption {
+  font-size: 0.8rem;
+}

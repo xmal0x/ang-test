@@ -16,7 +16,7 @@ export class AppComponent {
 
   isAddButtonEnabled$ = this.users$.pipe(
     map(users =>
-      users.every(u =>
-        u.active) && users.length < this.usersLimit)
+      users.every(u => u.active)
+      && users.length < this.usersLimit)
   )
 }

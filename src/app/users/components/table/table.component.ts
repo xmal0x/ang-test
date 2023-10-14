@@ -1,4 +1,6 @@
 import {Component, Input} from "@angular/core";
+import {User} from "../../state/user.model";
+import {UsersService} from "../../state/users.service";
 
 @Component({
   templateUrl: 'table.component.html',
@@ -9,4 +11,10 @@ export class TableComponent {
   @Input()
   users: {id: string, name: string, active: boolean}[] = []
 
+  constructor(private usersService: UsersService) {
+  }
+
+  setActive(user: User) {
+    this.usersService.setActive({...user, active: !user.active})
+  }
 }

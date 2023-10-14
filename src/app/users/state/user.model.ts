@@ -6,4 +6,4 @@ export type User = {
   active: boolean
 }
 
-export const createUser = (name: string): User => ({id: guid(), name, active: false})
+export const createUser = (name: string, active: boolean): User => ({id: guid(), name, active})

@@ -14,7 +14,7 @@
   <tr *ngFor="let user of users">
     <td>{{user.id}}</td>
     <td>{{user.name}}</td>
-    <td>{{user.active}}</td>
+    <td><input type="checkbox" [checked]="user.active" (change)="setActive(user)"></td>
   </tr>
   </tbody>
 </table>

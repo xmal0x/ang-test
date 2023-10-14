@@ -3,6 +3,7 @@ import {User} from "./user.model";
 import {Injectable} from "@angular/core";
 
 export interface UsersState extends EntityState<User> {
+  modal: {show: boolean}
 }
 
 const initialState: UsersState = {
@@ -10,7 +11,8 @@ const initialState: UsersState = {
     '1': {id: '1', name: 'John Doe', active: true},
     '2': {id: '2', name: 'Jane Doe', active: true},
   },
-  ids: ['1', '2']
+  ids: ['1', '2'],
+  modal: {show: false}
 }
 
 @Injectable({

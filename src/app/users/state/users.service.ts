@@ -17,4 +17,8 @@ export class UsersService {
   setActive({id, active}: User) {
     this.usersStore.update(id, {active})
   }
+
+  setModal(show: boolean) {
+    this.usersStore.update({modal: {show}})
+  }
 }

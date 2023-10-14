@@ -8,6 +8,8 @@ import {UsersState, UsersStore} from "./users.store";
 export class UsersQuery extends QueryEntity<UsersState> {
   users$ = this.selectAll()
 
+  showModal$ = this.select(store => store.modal.show)
+
   constructor(protected override store: UsersStore) {
     super(store);
   }

@@ -9,7 +9,6 @@ import {UsersService} from "../state/users.service";
   styleUrls: ['users-page.component.scss']
 })
 export class UsersPageComponent {
-
   private usersLimit = 5
 
   showModal$ = this.usersQuery.showModal$

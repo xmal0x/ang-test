@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from "@angular/core";
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from "@angular/core";
 import {NgClass} from "@angular/common";
 
 type ButtonType = 'button' | 'submit'
@@ -9,7 +9,8 @@ type ButtonSize = 'sm' | 'lg'
   standalone: true,
   imports: [NgClass],
   templateUrl: 'button.component.html',
-  styleUrls: ['button.component.scss']
+  styleUrls: ['button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
   @Input()

@@ -1,27 +1,43 @@
-# 4create2
+# Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+This is a test project developed using the following technologies:
 
-## Development server
+1. **Angular 16**: Angular is a popular framework for web application development.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. **Akita (State Management Library)**: Akita is a state management library for Angular applications.
 
-## Code scaffolding
+3. **RxJS**: RxJS is a library for reactive programming in JavaScript.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4. **SCSS (Sass)**: SCSS is a CSS preprocessor that allows you to use variables, mixins, and other advanced features to create styles.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To install this project on your local machine, follow these steps:
 
-## Running unit tests
+1. Clone the repository:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   git clone https://github.com/xmal0x/angular-akita.git
+   ```
 
-## Running end-to-end tests
+2. Navigate to the project directory:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   cd angular-akita
+   ```
 
-## Further help
+3. Install dependencies using npm or yarn:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   npm install
+   ```
+
+## Running the Project
+
+To run the project locally, execute the following commands:
+
+```bash
+npm start
+```
+
+After successfully running these commands, the project will be accessible at `http://localhost:4200/` in your web browser.

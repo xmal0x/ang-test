@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {map} from "rxjs";
+import {combineLatest, map} from "rxjs";
 import {UsersQuery} from "../state/users.query";
 import {UsersService} from "../state/users.service";
 
@@ -19,6 +19,18 @@ export class UsersPageComponent {
     map(users =>
       users.every(u => u.active)
       && users.length < this.usersLimit)
+  )
+
+  data$ = combineLatest([
+    this.users$,
+    this.showModal$,
+    this.isAddButtonEnabled$
+  ]).pipe(
+    map(([users, showModal, isAddButtonEnabled]) => ({
+      users,
+      showModal,
+      isAddButtonEnabled
+    }))
   )
 
   constructor(

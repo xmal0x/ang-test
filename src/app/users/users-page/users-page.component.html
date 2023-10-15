@@ -1,15 +1,23 @@
 <div class="users">
-  <div class="head">
-    <h2>Users</h2>
-    <button [disabled]="!(isAddButtonEnabled$ | async)" (click)="showModal()">Add User</button>
-  </div>
+  <ng-container *ngIf="data$ | async as data">
+    <div class="head">
+      <h2>Users</h2>
+      <app-button
+        [disabled]="!data.isAddButtonEnabled"
+        (click)="showModal()"
+        text="Add User"
+        type="button"
+        size="lg"
+      ></app-button>
+    </div>
 
-  <hr>
+    <hr>
 
-  <app-table [users]="(users$ | async) || []"></app-table>
+    <app-table [users]="data.users"></app-table>
 
-  <div *ngIf="showModal$ | async" class="modal">
-    <app-modal></app-modal>
-  </div>
+    <div *ngIf="data.showModal" class="modal">
+      <app-modal></app-modal>
+    </div>
+  </ng-container>
 
 </div>

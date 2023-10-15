@@ -4,6 +4,7 @@ import {BrowserModule} from "@angular/platform-browser";
 import {UsersPageComponent} from "./users-page/users-page.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ModalComponent} from "./components/modal/modal.component";
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import {ModalComponent} from "./components/modal/modal.component";
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    SharedModule,
+
   ],
   providers: [],
   exports: [

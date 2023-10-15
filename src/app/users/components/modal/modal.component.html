@@ -9,11 +9,20 @@
     [formGroup]="addUserForm"
   >
     <input class="text" placeholder="name..." type="text" formControlName="name">
+
+    <div *ngIf="addUserForm.controls['name'].invalid
+    && addUserForm.controls['name'].dirty">
+      <p *ngIf="addUserForm.controls['name'].errors?.['required']" class="error">Name is required field</p>
+      <p *ngIf="addUserForm.controls['name'].errors?.['notUnique']" class="error">Name must be unique</p>
+    </div>
+
     <label class="label">
       <input class="checkbox" type="checkbox" formControlName="active">active
     </label>
 
-    <button type="submit" [disabled]="!addUserForm.valid">Create</button>
+    <div class="button">
+      <app-button text="Create" type="submit" [disabled]="!addUserForm.valid" size="sm"></app-button>
+    </div>
   </form>
 
 </div>
